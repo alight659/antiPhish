@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+How To Be Safe
+{% endblock %}
+
+{% block body %}
+<div id="align_list">
+    <span style="text-align: center;">
+        <h1 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Few Tips to keep you Safe.</h1>
+    </span>
+    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+        <li>
+            Never click on any suspecious URL that you may have recieved through any mail or message.
+        </li>
+        <li>
+            Always check the URL/domain before clicking it.
+        </li>
+        <li>
+            If opened, never give any details to any suspecious website. Example: If the domain has a random string and the page asks for some credentials, never submit those.
+        </li>
+        <li>
+            For more, read here: <a href="https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" style="text-decoration: underline;" target="_blank">https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

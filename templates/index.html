@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Main
+{% endblock %}
+
+{% block body %}
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Phishing Detector</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Enter URL to check whether it can phish you or not</p>
+          </div>
+          <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4sm:space-y-0 space-y-4">
+            <div class="relative sm:mb-0 flex-grow w-full">
+              <label for="url" class="leading-7 text-sm text-gray-400">Enter URL</label>
+              <form action="/" method="post">
+                <input type="url" id="url" name="url" class="w-full bg-gray-800 bg-opacity-40 roundedborder border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 focus:bg-transparenttext-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="http://" autocapitalize="off" autocomplete="off" autofocus>
+                </div>
+                <button class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 roundedtext-lg" type="submit">Check</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-400 bg-gray-900 body-font">
+        {% if warning %}
+        <div role="alert" id="alignment">
+            <div class="bg-{{ color }}-500 text-white font-bold rounded-t px-4 py-2">
+              {{ warning }}
+            </div>
+            <div class="border border-t-0 border-{{ color }}-400 rounded-b px-4 py-3 text-white bg-gray-700">
+              <p>{{ status }}</p>
+            </div>
+        </div>
+        {% else %}
+        <div></div>
+        {% endif %}
+    </section>
+{% endblock %}
+
+{% block accuracy %}
+This model may provide with inaccurate results as it is still under training and is not 100% accurate.
+{% endblock %}

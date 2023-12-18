@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}{% endblock %} | antiPhish();
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/static/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="bg-gray-900">
+        <header class="text-gray-400 bg-gray-900 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#d2f2de" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 420 420">
+                  <path d="M210.4,270.419l43.776,23.176C250.154,314.312,231.875,330,210,330c-24.813,0-45-20.187-45-45V45.02
+		c0-0.007,0.001-0.013,0.001-0.02c0-24.813-20.187-45-45-45s-45,20.187-45,45H75v240c0,74.44,60.561,135,135,135
+		c74.44,0,135-60.56,135-135V144.41L210.4,270.419z M120.001,30c8.271,0,15,6.729,15,15s-6.729,15-15,15s-15-6.729-15-15
+		S111.73,30,120.001,30z M315,285c0,57.897-47.103,105-105,105s-105-47.103-105-105V87.419c4.695,1.666,9.742,2.581,15.001,2.581
+		c5.258,0,10.305-0.915,14.999-2.58V285c0,41.355,33.645,75,75,75s75-33.645,75-75v-9.031l-23.399-12.388L315,213.59V285z"></path>
+                </svg>
+                <span class="ml-3 text-xl">antiPhish();</span>
+              </a>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" href="/">Home</a>
+                <a class="mr-5 hover:text-white" href="/safety">How To Be Safe</a>
+              </nav>
+          </header>
+          {% block body %} {% endblock %}
+          <footer class="text-gray-400 bg-gray-900 body-font">
+            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+              <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#d2f2de" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 420 420">
+                  <path d="M210.4,270.419l43.776,23.176C250.154,314.312,231.875,330,210,330c-24.813,0-45-20.187-45-45V45.02
+		c0-0.007,0.001-0.013,0.001-0.02c0-24.813-20.187-45-45-45s-45,20.187-45,45H75v240c0,74.44,60.561,135,135,135
+		c74.44,0,135-60.56,135-135V144.41L210.4,270.419z M120.001,30c8.271,0,15,6.729,15,15s-6.729,15-15,15s-15-6.729-15-15
+		S111.73,30,120.001,30z M315,285c0,57.897-47.103,105-105,105s-105-47.103-105-105V87.419c4.695,1.666,9.742,2.581,15.001,2.581
+		c5.258,0,10.305-0.915,14.999-2.58V285c0,41.355,33.645,75,75,75s75-33.645,75-75v-9.031l-23.399-12.388L315,213.59V285z"></path>
+                </svg>
+                <span class="ml-3 text-xl">antiPhish();</span>
+              </a>
+              <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 Alight659 —
+                <a href="https://alight659.github.io" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@alight659</a>
+              </p>
+              <p class="text-gray-500 ml-1" id="align_footer_text">
+                {% block accuracy %} {% endblock %}
+              </p>
+              <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-400" href="https://github.com/alight659" target="_blank">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </footer>
+    </body>
+</html>

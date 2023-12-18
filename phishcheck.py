@@ -18,13 +18,16 @@ def is_phishing_url(url):
 
     parsed_url = urlparse(url)
 
-    suspicious_domains = ["phishing", "hack", "malicious", "reward", "deal", "@", "-"]
+    suspicious_domains = ["phishing", "hack", "malicious", "reward", "deal", "@"]
     for domain in suspicious_domains:
         if domain in parsed_url.netloc:
             return True
     
-    count = Counter(url)
-    if count["."] > 3:
+    countUrl = Counter(url)
+    if countUrl["."] > 2:
+        return True
+    countNetloc = Counter(parsed_url.netloc)
+    if countNetloc["-"] > 2:
         return True
 
     suspicious_keywords = ["login", "password", "account", "verify", "reward", "deal", "@", "-", "."]

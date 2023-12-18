@@ -15,7 +15,7 @@ Main
             <div class="relative sm:mb-0 flex-grow w-full">
               <label for="url" class="leading-7 text-sm text-gray-400">Enter URL</label>
               <form action="/" method="post">
-                <input type="url" id="url" name="url" class="w-full bg-gray-800 bg-opacity-40 roundedborder border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 focus:bg-transparenttext-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="http://" autocapitalize="off" autocomplete="off" autofocus>
+                <input type="text" id="url" name="url" class="w-full bg-gray-800 bg-opacity-40 roundedborder border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 focus:bg-transparenttext-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="http://" autocapitalize="off" autocomplete="off" autofocus>
                 </div>
                 <button class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 roundedtext-lg" type="submit">Check</button>
             </form>
@@ -39,5 +39,5 @@ Main
 {% endblock %}
 
 {% block accuracy %}
-This model may provide with inaccurate results as it is still under training and is not 100% accurate.
+This website model may provide with inaccurate results as it is still under development and is not 100% accurate.
 {% endblock %}

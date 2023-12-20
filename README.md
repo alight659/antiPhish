@@ -1,7 +1,7 @@
 # antiPhish(); - Phishing Detector
 
 Simple and Basic Phishing Detector developed using Python and Flask.
-A public instance of this project can be accessed at [https://heshwalker.pythonanywhere.com](https://heshwalker.pythonanywhere.com)
+A public instance of this project can be accessed at [https://antiphish.pythonanywhere.com](https://antiphish.pythonanywhere.com)
 ## Run Locally
 
 Clone the project
